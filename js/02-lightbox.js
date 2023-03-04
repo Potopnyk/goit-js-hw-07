@@ -36,13 +36,13 @@ function onGalleryListElClick(e) {
     return href;
 }
 
-let gallery = new SimpleLightbox('.gallery a');
+new SimpleLightbox(".gallery a", {
+    captionSelector: 'img',
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+    scrollZoom: false,
+    });
 
-gallery.on('show.simplelightbox', function () {
-});
-
-gallery.on('error.simplelightbox', function (e) {
-	console.log(e);
-});
 
 console.log(galleryItems);
